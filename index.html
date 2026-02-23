@@ -1,0 +1,512 @@
+<html lang="es" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palette | Beauty Studio &amp; Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: rgba(133, 137, 130, 0.5); border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: rgba(107, 110, 104, 0.8); }
+
+      .reveal-img { transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1); }
+      .group:hover .reveal-img { transform: scale(1.05); }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-[#858982] selection:text-white flex flex-col min-h-screen text-neutral-900 font-sans bg-white">
+
+<!-- Background (image) added by Aura -->
+<div class="fixed bg-center w-full h-screen bg-cover -z-10 top-0" style="background-image: url(&quot;https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/00afa76c-5c1a-4cf4-b52c-272211493bef_3840w.png&quot;); mask-image: linear-gradient(180deg, transparent, black 0%, black 80%, transparent); -webkit-mask-image: linear-gradient(180deg, transparent, black 0%, black 80%, transparent);" data-alpha-mask="80"></div>
+
+
+
+    <!-- Fixed Parallax Background -->
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 bg-[#efeadd]/70 backdrop-blur-xl border-b border-neutral-300/30">
+      <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+        <div class="flex h-24 items-center justify-between">
+          <div class="flex-shrink-0 flex items-center">
+            <a href="#" class="flex items-center justify-center group">
+              <svg viewBox="0 0 120 60" class="h-8 sm:h-10 w-auto mr-4 text-[#858982] fill-current transition-transform duration-500 group-hover:-translate-y-0.5">
+                <path d="M15,25 C45,10 80,15 110,40 C80,25 50,18 15,25 Z"></path>
+                <path d="M35,45 C65,60 95,55 115,40 C85,50 60,45 35,45 Z"></path>
+              </svg>
+              <div class="flex flex-col">
+                <span class="text-2xl sm:text-3xl tracking-tight font-normal text-neutral-900 leading-none">
+                  PALETTE
+                </span>
+                <span class="text-sm tracking-widest font-light text-[#858982] mt-1.5 uppercase">
+                  Beauty Studio
+                </span>
+              </div>
+            </a>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-12">
+              <a href="#servicios" class="text-base tracking-widest uppercase font-normal text-neutral-600 hover:text-neutral-900 transition-colors duration-200">
+                Servicios
+              </a>
+              <a href="#sobre-mi" class="text-base tracking-widest uppercase font-normal text-neutral-600 hover:text-neutral-900 transition-colors duration-200">
+                Sobre Mí
+              </a>
+              <a href="#galeria" class="text-base tracking-widest uppercase font-normal text-neutral-600 hover:text-neutral-900 transition-colors duration-200">
+                Galería
+              </a>
+              <a href="#contacto" class="text-base tracking-widest uppercase font-normal text-neutral-600 hover:text-neutral-900 transition-colors duration-200">
+                Contacto
+              </a>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <a href="#reserva" class="inline-flex items-center justify-center uppercase hover:bg-[#858982] hover:text-[#efeadd] transition-all duration-300 text-base font-normal text-neutral-900 tracking-widest border-[#858982] border rounded-md pt-3.5 pr-8 pb-3.5 pl-8">
+              Reservar Cita
+            </a>
+          </div>
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button class="text-neutral-600 hover:text-neutral-900 focus:outline-none">
+              <i data-lucide="menu" class="w-7 h-7" stroke-width="1.5"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="sticky top-0 pt-32 h-[100vh] w-full flex items-center overflow-hidden z-0">
+      <div class="-z-10 w-full h-full absolute top-0 right-0 bottom-0 left-0">
+        <img src="https://www.aura.build/editor/background-image.jpg" alt="Static Model" class="w-full h-full object-cover">
+      </div>
+      <div class="lg:px-12 z-10 w-full max-w-[90rem] mr-auto ml-auto pr-6 pl-6 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-x-16 gap-y-16 items-center">
+          <div class="lg:col-span-7 sm:p-12 parallax-hero bg-white/10 border-white/20 border pt-20 pr-8 pb-24 pl-8 backdrop-blur-sm">
+  <style class="">
+    @supports (animation-timeline: scroll()) {
+      @keyframes slideOutEffect {
+        0% { transform: translateX(0); opacity: 1; }
+        100% { transform: translateX(-100%); opacity: 0; }
+      }
+      .parallax-hero {
+        animation: slideOutEffect linear both;
+        animation-timeline: scroll();
+        animation-range: 0 60vh;
+      }
+    }
+  </style>
+  <div class="inline-flex items-center mb-8">
+    <span class="text-sm font-normal tracking-widest uppercase text-[#858982]">
+      Especialistas en Belleza Natural
+    </span>
+    <div class="w-12 h-px bg-[#858982] ml-4"></div>
+  </div>
+  <h1 class="sm:text-8xl lg:text-9xl leading-[0.95] lg:p-8 text-7xl font-normal text-[#F4F5F0] tracking-tighter bg-gradient-to-br from-white/10 to-white/0 rounded-lg mb-8 pt-6 pr-3 pb-6 pl-3"><style>
+    @supports (animation-timeline: view()) {
+      @keyframes fadeOutOnScroll {
+        0% { opacity: 1; transform: translateY(0) scale(1); }
+        100% { opacity: 0; transform: translateY(-40px) scale(0.95); filter: blur(4px); }
+      }
+      [data-element-id="aura-emlylmqks15faf5z0"] {
+        animation: fadeOutOnScroll linear both;
+        animation-timeline: view();
+        animation-range: exit 0% exit 100%;
+      }
+    }
+  </style> Despierta con <br> confianza, <br> <span class="font-light italic text-[#F4F5F0]/70">todos los días.</span></h1>
+  
+  <div class="flex flex-col sm:flex-row gap-6">
+    <a href="#reserva" class="inline-flex items-center justify-between uppercase hover:bg-[#858982] transition-all duration-500 sm:w-auto group text-base font-normal text-[#efeadd] tracking-widest bg-neutral-900 w-full pt-5 pr-8 pb-5 pl-8">
+      Agendar Evaluación
+      <i data-lucide="arrow-right" class="ml-6 w-5 h-5 group-hover:translate-x-2 transition-transform" stroke-width="1.5"></i>
+    </a>
+  </div>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="z-10 border-neutral-300/30 border-t pt-32 pb-32 relative" id="servicios">
+      <div class="lg:px-12 max-w-[90rem] mr-auto ml-auto pr-6 pl-6">
+        <div class="flex flex-col md:flex-row md:items-end gap-8 mb-20 gap-x-8 gap-y-8 justify-between">
+          <div class="">
+            <h2 class="text-6xl lg:text-7xl font-normal tracking-tight text-neutral-900 mb-6">
+              Nuestros Servicios
+            </h2>
+            <p class="text-2xl text-neutral-600 max-w-2xl font-extralight">
+              Procedimientos personalizados y de vanguardia diseñados para
+              resaltar tu belleza natural con resultados de larga duración.
+            </p>
+          </div>
+          <a href="#contacto" class="text-base font-normal uppercase tracking-widest text-neutral-900 border-b border-neutral-900 pb-1 hover:text-[#858982] hover:border-[#858982] transition-colors">
+            Ver Todos Los Servicios
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-y border-neutral-300/40">
+          <!-- Service 1 -->
+          <div class="group lg:p-16 md:border-b-0 md:border-r hover:bg-white/30 transition-colors duration-500 flex flex-col h-full border-neutral-300/40 border-b pt-10 pr-10 pb-10 pl-10 relative">
+            <div class="flex justify-between items-start mb-16">
+              <span class="text-base font-normal tracking-widest text-[#858982]">
+                01
+              </span>
+              <i data-lucide="pen-tool" class="w-8 h-8 text-neutral-400 group-hover:text-neutral-900 transition-colors" stroke-width="1.5"></i>
+            </div>
+            <h3 class="text-4xl font-normal tracking-tight text-neutral-900 mb-6">
+              Diseño de Cejas
+            </h3>
+            <p class="text-xl text-neutral-600 mb-12 font-extralight flex-grow">
+              Técnicas avanzadas de Microblading, Powder Brows o Combo para
+              enmarcar tu mirada con cejas perfectas y naturales.
+            </p>
+            <a href="#" class="inline-flex items-center text-base font-normal tracking-widest uppercase text-neutral-900 group-hover:text-[#858982] transition-colors mt-auto">
+              Saber más
+              <i data-lucide="arrow-right" class="ml-2 w-5 h-5" stroke-width="1.5"></i>
+            </a>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="group relative p-10 lg:p-16 border-b md:border-b-0 md:border-r border-neutral-300/40 hover:bg-white/30 transition-colors duration-500 flex flex-col h-full">
+            <div class="flex justify-between items-start mb-16">
+              <span class="text-base font-normal tracking-widest text-[#858982]">
+                02
+              </span>
+              <i data-lucide="droplet" class="w-8 h-8 text-neutral-400 group-hover:text-neutral-900 transition-colors" stroke-width="1.5"></i>
+            </div>
+            <h3 class="text-4xl font-normal tracking-tight text-neutral-900 mb-6">
+              Lip Blush
+            </h3>
+            <p class="flex-grow text-xl text-neutral-600 font-extralight mb-12">
+              Aporta color, definición y un aspecto de mayor volumen a tus
+              labios con técnicas de acuarela y neutralización.
+            </p>
+            <a href="#" class="inline-flex items-center text-base font-normal tracking-widest uppercase text-neutral-900 group-hover:text-[#858982] transition-colors mt-auto">
+              Saber más
+              <i data-lucide="arrow-right" class="ml-2 w-5 h-5" stroke-width="1.5"></i>
+            </a>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="group lg:p-16 hover:bg-white/30 transition-colors duration-500 flex flex-col h-full pt-10 pr-10 pb-10 pl-10 relative">
+            <div class="flex justify-between items-start mb-16">
+              <span class="text-base font-normal tracking-widest text-[#858982]">
+                03
+              </span>
+              <i data-lucide="eye" class="w-8 h-8 text-neutral-400 group-hover:text-neutral-900 transition-colors" stroke-width="1.5"></i>
+            </div>
+            <h3 class="text-4xl font-normal tracking-tight text-neutral-900 mb-6">
+              Delineado de Ojos
+            </h3>
+            <p class="text-xl text-neutral-600 mb-12 font-extralight flex-grow">
+              Desde un sutil realce de pestañas hasta un delineado clásico, dale
+              profundidad y expresión a tu mirada de forma permanente.
+            </p>
+            <a href="#" class="inline-flex items-center text-base font-normal tracking-widest uppercase text-neutral-900 group-hover:text-[#858982] transition-colors mt-auto">
+              Saber más
+              <i data-lucide="arrow-right" class="ml-2 w-5 h-5" stroke-width="1.5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-mi" class="relative z-10 bg-[#858982] text-[#efeadd]">
+      <div class="max-w-[90rem] mx-auto px-6 lg:px-12 py-32 grid grid-cols-1 lg:grid-cols-2">
+        <div class="order-2 lg:order-1 relative h-[40vh] lg:h-auto overflow-hidden rounded-sm hidden lg:block border border-white/10">
+          <img src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&amp;fit=crop&amp;q=80&amp;w=800" class="w-full h-full object-cover" alt="About Model">
+        </div>
+        <div class="order-1 lg:order-2 lg:pl-24 flex flex-col justify-center">
+          <div class="inline-flex items-center mb-10">
+            <span class="text-sm font-normal tracking-widest uppercase text-white/70">
+              La Fundadora
+            </span>
+            <div class="w-12 h-px bg-white/30 ml-4"></div>
+          </div>
+          <h2 class="text-6xl lg:text-8xl font-normal tracking-tight mb-10 text-white leading-none">
+            Detrás
+            <br>
+            del Arte.
+          </h2>
+          <div class="space-y-8 text-2xl font-extralight text-[#efeadd]/90 max-w-xl">
+            <p class="">
+              Hola, soy Angélica, la fundadora de Palette. Mi pasión es ayudar a
+              las mujeres a sentirse seguras y radiantes en su propia piel. Con
+              certificaciones internacionales y años de experiencia en la
+              industria de la belleza, me dedico a perfeccionar técnicas que
+              ofrecen resultados sutiles y elegantes.
+            </p>
+            <p class="">
+              Creo firmemente que el maquillaje permanente no debe transformar
+              quién eres, sino realzar tu mejor versión. Cada rostro es un
+              lienzo único que merece un diseño personalizado.
+            </p>
+          </div>
+
+          <div class="flex items-center space-x-12 mt-16 pt-16 border-t border-white/20">
+            <div class="flex flex-col">
+              <span class="text-6xl font-normal tracking-tight text-white mb-2">
+                5+
+              </span>
+              <span class="text-base tracking-widest uppercase text-white/70 font-light">
+                Años de exp.
+              </span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-6xl font-normal tracking-tight text-white mb-2">
+                1k+
+              </span>
+              <span class="text-base tracking-widest uppercase text-white/70 font-light">
+                Clientas
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="relative z-10 py-32 bg-[#efeadd] border-y border-neutral-300/30">
+      <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div class="max-w-2xl">
+            <h2 class="text-6xl lg:text-7xl font-normal tracking-tight text-neutral-900 mb-6">
+              Portafolio
+            </h2>
+            <p class="text-2xl text-neutral-600 font-extralight">
+              Explora algunos de nuestros trabajos más recientes. Sigue nuestro
+              día a día en Instagram.
+            </p>
+          </div>
+          <a href="https://www.instagram.com/palette.beautystudio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center pb-2 border-b border-neutral-900 text-base tracking-widest uppercase font-normal text-neutral-900 hover:text-[#858982] hover:border-[#858982] transition-colors whitespace-nowrap">
+            <i data-lucide="camera" class="mr-3 w-5 h-5" stroke-width="1.5"></i>
+            @palette.beautystudio
+          </a>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+          <div class="group relative aspect-[3/4] overflow-hidden bg-neutral-200">
+            <img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Cejas Microblading" class="w-full h-full object-cover reveal-img">
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+              <i data-lucide="heart" class="text-white w-8 h-8" stroke-width="1.5"></i>
+            </div>
+          </div>
+          <div class="group relative aspect-[3/4] overflow-hidden bg-neutral-200 lg:translate-y-12">
+            <img src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Labios" class="w-full h-full object-cover reveal-img">
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+              <i data-lucide="heart" class="text-white w-8 h-8" stroke-width="1.5"></i>
+            </div>
+          </div>
+          <div class="group relative aspect-[3/4] overflow-hidden bg-neutral-200">
+            <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Detalle" class="w-full h-full object-cover reveal-img">
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+              <i data-lucide="heart" class="text-white w-8 h-8" stroke-width="1.5"></i>
+            </div>
+          </div>
+          <div class="group relative aspect-[3/4] overflow-hidden bg-neutral-200 lg:translate-y-12">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/d8ed387b-88b3-4d55-bcc1-76400632a879_800w.png" alt="Cejas" class="w-full h-full object-cover reveal-img">
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+              <i data-lucide="heart" class="text-white w-8 h-8" stroke-width="1.5"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultation / Booking Section -->
+    <section id="reserva" class="relative z-10 py-32 bg-white border-b border-neutral-300/30">
+      <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+          <div>
+            <h2 class="text-6xl lg:text-8xl font-normal tracking-tight text-neutral-900 mb-8 leading-[0.95]">
+              ¿Lista para tu
+              <br>
+              transformación?
+            </h2>
+            <p class="text-2xl text-neutral-600 mb-12 font-extralight max-w-md">
+              Agenda una consulta inicial donde evaluaremos tu tipo de piel,
+              facciones y objetivos para diseñar el procedimiento perfecto para
+              ti.
+            </p>
+          </div>
+
+          <div>
+            <form class="space-y-10">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="relative">
+                  <input type="text" id="name" class="block w-full bg-transparent border-0 border-b border-neutral-300/50 py-3 text-xl text-neutral-900 focus:ring-0 focus:border-neutral-900 peer placeholder-transparent transition-colors" placeholder="Nombre completo">
+                  <label for="name" class="absolute left-0 -top-3.5 text-sm tracking-widest uppercase font-normal text-neutral-500 transition-all peer-placeholder-shown:text-lg peer-placeholder-shown:text-neutral-500 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-neutral-900">
+                    Nombre completo
+                  </label>
+                </div>
+                <div class="relative">
+                  <input type="tel" id="phone" class="block w-full bg-transparent border-0 border-b border-neutral-300/50 py-3 text-xl text-neutral-900 focus:ring-0 focus:border-neutral-900 peer placeholder-transparent transition-colors" placeholder="Teléfono">
+                  <label for="phone" class="absolute left-0 -top-3.5 text-sm tracking-widest uppercase font-normal text-neutral-500 transition-all peer-placeholder-shown:text-lg peer-placeholder-shown:text-neutral-500 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-neutral-900">
+                    Teléfono
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm tracking-widest uppercase font-normal text-neutral-500 mb-6">
+                  Servicio de interés
+                </label>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <label class="relative flex cursor-pointer border border-neutral-300/50 p-5 hover:border-neutral-900 transition-colors focus-within:border-neutral-900 group">
+                    <input type="radio" name="service" class="sr-only" value="cejas">
+                    <span class="block text-base tracking-widest uppercase font-normal text-neutral-600 group-hover:text-neutral-900">
+                      Cejas
+                    </span>
+                  </label>
+                  <label class="relative flex cursor-pointer border border-neutral-300/50 p-5 hover:border-neutral-900 transition-colors focus-within:border-neutral-900 group">
+                    <input type="radio" name="service" class="sr-only" value="labios">
+                    <span class="block text-base tracking-widest uppercase font-normal text-neutral-600 group-hover:text-neutral-900">
+                      Labios
+                    </span>
+                  </label>
+                  <label class="relative flex cursor-pointer border border-neutral-300/50 p-5 hover:border-neutral-900 transition-colors focus-within:border-neutral-900 group">
+                    <input type="radio" name="service" class="sr-only" value="ojos">
+                    <span class="block text-base tracking-widest uppercase font-normal text-neutral-600 group-hover:text-neutral-900">
+                      Ojos
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="relative">
+                <textarea id="message" rows="1" class="block w-full bg-transparent border-0 border-b border-neutral-300/50 py-3 text-xl text-neutral-900 focus:ring-0 focus:border-neutral-900 peer placeholder-transparent transition-colors resize-none" placeholder="Mensaje"></textarea>
+                <label for="message" class="absolute left-0 -top-3.5 text-sm tracking-widest uppercase font-normal text-neutral-500 transition-all peer-placeholder-shown:text-lg peer-placeholder-shown:text-neutral-500 peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-neutral-900">
+                  Mensaje adicional (Opcional)
+                </label>
+              </div>
+
+              <div class="pt-6">
+                <button type="button" class="inline-flex items-center justify-between px-10 py-5 text-base tracking-widest uppercase font-normal text-[#efeadd] bg-neutral-900 hover:bg-[#858982] transition-colors w-full sm:w-auto group">
+                  Solicitar Cita
+                  <i data-lucide="arrow-right" class="ml-8 w-5 h-5 group-hover:translate-x-2 transition-transform" stroke-width="1.5"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 bg-neutral-950 text-neutral-400 py-24 mt-auto">
+      <div class="max-w-[90rem] mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-12 gap-16">
+        <div class="md:col-span-5 flex flex-col items-start">
+          <a href="#" class="inline-flex items-center group mb-10">
+            <svg viewBox="0 0 120 60" class="h-8 sm:h-10 w-auto mr-4 text-[#858982] fill-current transition-transform duration-500 group-hover:-translate-y-0.5">
+              <path d="M15,25 C45,10 80,15 110,40 C80,25 50,18 15,25 Z"></path>
+              <path d="M35,45 C65,60 95,55 115,40 C85,50 60,45 35,45 Z"></path>
+            </svg>
+            <div class="flex flex-col">
+              <span class="text-2xl sm:text-3xl tracking-tight font-normal text-white leading-none">
+                PALETTE
+              </span>
+              <span class="text-sm tracking-widest font-light text-[#858982] mt-1.5 uppercase">
+                Beauty Studio
+              </span>
+            </div>
+          </a>
+          <p class="text-xl text-neutral-500 max-w-sm font-extralight">
+            Elevando la belleza natural a través del arte del maquillaje
+            permanente. Estudio privado ofreciendo un servicio exclusivo.
+          </p>
+        </div>
+
+        <div class="md:col-span-3">
+          <h4 class="text-sm tracking-widest uppercase font-normal text-white mb-8">
+            Navegación
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a href="#servicios" class="text-lg hover:text-white transition-colors">
+                Servicios
+              </a>
+            </li>
+            <li>
+              <a href="#sobre-mi" class="text-lg hover:text-white transition-colors">
+                Sobre Mí
+              </a>
+            </li>
+            <li>
+              <a href="#galeria" class="text-lg hover:text-white transition-colors">
+                Portafolio
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-lg hover:text-white transition-colors">
+                Preguntas Frecuentes
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4">
+          <h4 class="text-sm tracking-widest uppercase font-normal text-white mb-8">
+            Contacto
+          </h4>
+          <ul class="space-y-6">
+            <li class="flex items-start text-lg">
+              <i data-lucide="map-pin" class="mr-4 w-6 h-6 text-[#858982]" stroke-width="1.5"></i>
+              Estudio Privado, Ciudad
+            </li>
+            <li class="flex items-center text-lg">
+              <i data-lucide="mail" class="mr-4 w-6 h-6 text-[#858982]" stroke-width="1.5"></i>
+              hola@palette.com
+            </li>
+            <li class="flex items-center pt-4">
+              <a href="https://www.instagram.com/palette.beautystudio" target="_blank" rel="noopener noreferrer" class="text-neutral-500 hover:text-white transition-colors flex items-center text-lg">
+                <i data-lucide="camera" class="mr-3 w-6 h-6" stroke-width="1.5"></i>
+                Instagram
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="max-w-[90rem] mx-auto px-6 lg:px-12 mt-24 pt-8 border-t border-neutral-800/50 flex flex-col md:flex-row items-center justify-between">
+        <p class="text-base text-neutral-600 font-light">
+          © 2024 Palette Beauty Studio. Todos los derechos reservados.
+        </p>
+        <div class="flex space-x-8 mt-4 md:mt-0">
+          <a href="#" class="text-base font-light text-neutral-600 hover:text-white transition-colors">
+            Privacidad
+          </a>
+          <a href="#" class="text-base font-light text-neutral-600 hover:text-white transition-colors">
+            Términos
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+
+      // Custom radio button logic
+      document.querySelectorAll('input[name="service"]').forEach(radio => {
+          radio.addEventListener('change', function() {
+              // Reset all
+              document.querySelectorAll('input[name="service"]').forEach(r => {
+                  r.parentElement.classList.remove('border-neutral-900');
+                  r.parentElement.classList.add('border-neutral-300/50');
+                  r.nextElementSibling.classList.remove('text-neutral-900');
+                  r.nextElementSibling.classList.add('text-neutral-600');
+              });
+              // Set active
+              if(this.checked) {
+                  this.parentElement.classList.remove('border-neutral-300/50');
+                  this.parentElement.classList.add('border-neutral-900');
+                  this.nextElementSibling.classList.remove('text-neutral-600');
+                  this.nextElementSibling.classList.add('text-neutral-900');
+              }
+          });
+      });
+    </script>
+  
+</body></html>
