@@ -82,17 +82,12 @@
       <div class="lg:px-12 z-10 w-full max-w-[90rem] mr-auto ml-auto pr-6 pl-6 relative">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-x-16 gap-y-16 items-center">
           <div class="lg:col-span-7 sm:p-12 parallax-hero bg-white/10 border-white/20 border pt-20 pr-8 pb-24 pl-8 backdrop-blur-sm">
-  <style class="">
-    @supports (animation-timeline: scroll()) {
-      @keyframes slideOutEffect {
-        0% { transform: translateX(0); opacity: 1; }
-        100% { transform: translateX(-100%); opacity: 0; }
-      }
-      .parallax-hero {
-        animation: slideOutEffect linear both;
-        animation-timeline: scroll();
-        animation-range: 0 60vh;
-      }
+  <style>
+    .parallax-hero,
+    .hero-heading,
+    .hero-cta {
+      will-change: transform, opacity, filter;
+      transition: none;
     }
   </style>
   <div class="inline-flex items-center mb-8">
@@ -101,21 +96,9 @@
     </span>
     <div class="w-12 h-px bg-[#858982] ml-4"></div>
   </div>
-  <h1 class="sm:text-8xl lg:text-9xl leading-[0.95] lg:p-8 text-7xl font-normal text-[#F4F5F0] tracking-tighter bg-gradient-to-br from-white/10 to-white/0 rounded-lg mb-8 pt-6 pr-3 pb-6 pl-3"><style>
-    @supports (animation-timeline: view()) {
-      @keyframes fadeOutOnScroll {
-        0% { opacity: 1; transform: translateY(0) scale(1); }
-        100% { opacity: 0; transform: translateY(-40px) scale(0.95); filter: blur(4px); }
-      }
-      [data-element-id="aura-emlylmqks15faf5z0"] {
-        animation: fadeOutOnScroll linear both;
-        animation-timeline: view();
-        animation-range: exit 0% exit 100%;
-      }
-    }
-  </style> Despierta con <br> confianza, <br> <span class="font-light italic text-[#F4F5F0]/70">todos los días.</span></h1>
-  
-  <div class="flex flex-col sm:flex-row gap-6">
+  <h1 class="hero-heading sm:text-8xl lg:text-9xl leading-[0.95] lg:p-8 text-7xl font-normal text-[#F4F5F0] tracking-tighter bg-gradient-to-br from-white/10 to-white/0 rounded-lg mb-8 pt-6 pr-3 pb-6 pl-3">Despierta con <br> confianza, <br> <span class="font-light italic text-[#F4F5F0]/70">todos los días.</span></h1>
+
+  <div class="hero-cta flex flex-col sm:flex-row gap-6">
     <a href="#reserva" class="inline-flex items-center justify-between uppercase hover:bg-[#858982] transition-all duration-500 sm:w-auto group text-base font-normal text-[#efeadd] tracking-widest bg-neutral-900 w-full pt-5 pr-8 pb-5 pl-8">
       Agendar Evaluación
       <i data-lucide="arrow-right" class="ml-6 w-5 h-5 group-hover:translate-x-2 transition-transform" stroke-width="1.5"></i>
@@ -487,6 +470,52 @@
     <script>
       // Initialize Lucide icons
       lucide.createIcons();
+
+      // Hero scroll-triggered fade-out
+      (function() {
+        const hero = document.querySelector('.parallax-hero');
+        const heading = document.querySelector('.hero-heading');
+        const cta = document.querySelector('.hero-cta');
+        const maxScroll = window.innerHeight * 0.6;
+
+        function lerp(start, end, t) {
+          return start + (end - start) * Math.min(Math.max(t, 0), 1);
+        }
+
+        function onScroll() {
+          const y = window.scrollY;
+          const progress = Math.min(y / maxScroll, 1);
+
+          // Heading: fades and blurs first (0% - 70% of scroll range)
+          const hProgress = Math.min(progress / 0.7, 1);
+          const hOpacity = lerp(1, 0, hProgress);
+          const hBlur = lerp(0, 6, hProgress);
+          const hY = lerp(0, -50, hProgress);
+          heading.style.opacity = hOpacity;
+          heading.style.filter = 'blur(' + hBlur + 'px)';
+          heading.style.transform = 'translateY(' + hY + 'px)';
+
+          // CTA: fades and drops (0% - 50% of scroll range)
+          const cProgress = Math.min(progress / 0.5, 1);
+          const cOpacity = lerp(1, 0, cProgress);
+          const cY = lerp(0, 30, cProgress);
+          cta.style.opacity = cOpacity;
+          cta.style.transform = 'translateY(' + cY + 'px)';
+
+          // Container: fades and scales (20% - 100% of scroll range)
+          const pProgress = Math.min(Math.max((progress - 0.2) / 0.8, 0), 1);
+          const pOpacity = lerp(1, 0, pProgress);
+          const pScale = lerp(1, 0.95, pProgress);
+          const pY = lerp(0, -60, pProgress);
+          const pBlur = lerp(0, 8, pProgress);
+          hero.style.opacity = pOpacity;
+          hero.style.transform = 'translateY(' + pY + 'px) scale(' + pScale + ')';
+          hero.style.filter = 'blur(' + pBlur + 'px)';
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+      })();
 
       // Custom radio button logic
       document.querySelectorAll('input[name="service"]').forEach(radio => {
