@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es" class="scroll-smooth"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,7 +55,7 @@
               <a href="#galeria" class="text-base tracking-widest uppercase font-normal text-neutral-600 hover:text-neutral-900 transition-colors duration-200">
                 Galería
               </a>
-              <a href="#contacto" class="text-base tracking-widest uppercase font-normal text-neutral-600 hover:text-neutral-900 transition-colors duration-200">
+              <a href="#reserva" class="text-base tracking-widest uppercase font-normal text-neutral-600 hover:text-neutral-900 transition-colors duration-200">
                 Contacto
               </a>
             </div>
@@ -66,10 +67,21 @@
           </div>
           <!-- Mobile menu button -->
           <div class="md:hidden flex items-center">
-            <button class="text-neutral-600 hover:text-neutral-900 focus:outline-none">
-              <i data-lucide="menu" class="w-7 h-7" stroke-width="1.5"></i>
+            <button id="mobile-menu-btn" class="text-neutral-600 hover:text-neutral-900 focus:outline-none">
+              <i data-lucide="menu" class="w-7 h-7 menu-icon" stroke-width="1.5"></i>
+              <i data-lucide="x" class="w-7 h-7 close-icon hidden" stroke-width="1.5"></i>
             </button>
           </div>
+        </div>
+      </div>
+      <!-- Mobile menu panel -->
+      <div id="mobile-menu" class="hidden md:hidden bg-[#efeadd]/95 backdrop-blur-xl border-t border-neutral-300/30">
+        <div class="px-6 py-8 space-y-6">
+          <a href="#servicios" class="block text-lg tracking-widest uppercase font-normal text-neutral-700 hover:text-neutral-900">Servicios</a>
+          <a href="#sobre-mi" class="block text-lg tracking-widest uppercase font-normal text-neutral-700 hover:text-neutral-900">Sobre Mí</a>
+          <a href="#galeria" class="block text-lg tracking-widest uppercase font-normal text-neutral-700 hover:text-neutral-900">Galería</a>
+          <a href="#reserva" class="block text-lg tracking-widest uppercase font-normal text-neutral-700 hover:text-neutral-900">Contacto</a>
+          <a href="#reserva" class="inline-flex items-center justify-center uppercase bg-neutral-900 text-[#efeadd] text-base font-normal tracking-widest w-full py-4 mt-4 hover:bg-[#858982] transition-colors">Reservar Cita</a>
         </div>
       </div>
     </nav>
@@ -122,7 +134,7 @@
               resaltar tu belleza natural con resultados de larga duración.
             </p>
           </div>
-          <a href="#contacto" class="text-base font-normal uppercase tracking-widest text-neutral-900 border-b border-neutral-900 pb-1 hover:text-[#858982] hover:border-[#858982] transition-colors">
+          <a href="#reserva" class="text-base font-normal uppercase tracking-widest text-neutral-900 border-b border-neutral-900 pb-1 hover:text-[#858982] hover:border-[#858982] transition-colors">
             Ver Todos Los Servicios
           </a>
         </div>
@@ -422,8 +434,8 @@
               </a>
             </li>
             <li>
-              <a href="#" class="text-lg hover:text-white transition-colors">
-                Preguntas Frecuentes
+              <a href="#reserva" class="text-lg hover:text-white transition-colors">
+                Reservar Cita
               </a>
             </li>
           </ul>
@@ -515,6 +527,28 @@
 
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
+      })();
+
+      // Mobile menu toggle
+      (function() {
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const menuIcon = btn.querySelector('.menu-icon');
+        const closeIcon = btn.querySelector('.close-icon');
+
+        btn.addEventListener('click', function() {
+          menu.classList.toggle('hidden');
+          menuIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+
+        menu.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            menu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+          });
+        });
       })();
 
       // Custom radio button logic
